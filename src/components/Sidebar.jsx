@@ -40,7 +40,10 @@ export default function Sidebar() {
         </Button>
       </div>
 
-      <div className="p-4 border-t flex items-center gap-3">
+      <div
+        onClick={() => navigate("/settings")}
+        className="p-4 border-t flex items-center gap-3 cursor-pointer hover:bg-gray-100 transition"
+      >
         <Avatar className="w-10 h-10">
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>LB</AvatarFallback>
