@@ -2,8 +2,19 @@ import axios from "axios";
 
 const BASE_URL = "https://dummyjson.com/products";
 
-export const fetchProducts = async ({ page = 1, search = "" }) => {
-  const { data } = await axios.get(`${BASE_URL}?limit=10&skip=${(page - 1) * 10}&q=${search}`);
+export const fetchProducts = async ({ page = 1, search = "", category = "", delay = 0 }) => {
+  let url;
+
+  if (category) {
+    // Use category endpoint if category is selected
+    url = `${BASE_URL}/category/${encodeURIComponent(category)}?limit=10&skip=${(page - 1) * 10}&delay=${delay}`;
+  } else {
+    // Default endpoint
+    url = `${BASE_URL}?limit=10&skip=${(page - 1) * 10}&delay=${delay}`;
+    if (search) url += `&q=${encodeURIComponent(search)}`;
+  }
+
+  const { data } = await axios.get(url);
   return data;
 };
 

@@ -53,7 +53,7 @@ export default function Dashboard() {
           return (
             <Card
               key={idx}
-              className={`shadow-xl transform transition-transform hover:-translate-y-1 hover:shadow-2xl bg-gradient-to-r ${card.color} text-white p-6 flex flex-col items-center text-center rounded-xl`}
+              className={`shadow-xl bg-blue transform transition-transform hover:-translate-y-1 hover:shadow-2xl bg-gradient-to-r ${card.color} text-white p-6 flex flex-col items-center text-center rounded-xl`}
             >
               <div className="bg-white bg-opacity-20 p-3 rounded-full mb-3">
                 <Icon className="h-8 w-8 text-black" />
