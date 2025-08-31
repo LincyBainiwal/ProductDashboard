@@ -81,6 +81,8 @@ The project uses [DummyJSON](https://dummyjson.com/) as the backend. The followi
 * `DELETE /products/{id}` → Delete a product
 
 ---
+## Video
+[Vite + React.webm](https://github.com/user-attachments/assets/49a74ddd-b41e-4231-9081-6ef352bba233)
 
 ## Screenshots
 <img width="1900" height="865" alt="image" src="https://github.com/user-attachments/assets/d2c9275f-703a-48e4-b6d7-f194ce90ac87" />
